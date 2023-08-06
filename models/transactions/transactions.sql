@@ -8,4 +8,4 @@ CAST(` WITHDRAWAL AMT ` AS FLOAT64) as withdrawal_amt,
 CAST(` DEPOSIT AMT ` AS FLOAT64) as deposit_amt,
 CAST(`BALANCE AMT` AS FLOAT64) as balance_amt
 
-from `dbt-test-395011.dbt_production.transactions_data`
+from `dbt-test-395011.dbt_huruizverastegui.transactions_data`
