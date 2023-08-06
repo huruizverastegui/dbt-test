@@ -1,7 +1,7 @@
 select 
 replace(`Account No`,"'","") as account_no, 
 `DATE` as date, 
-`TRANSACTION DETAILS` as transactions_details,
+`TRANSACTION DETAILS` as transaction_details,
 `CHQ_NO` as chq_no,
 `VALUE DATE` as value_date,
 ` WITHDRAWAL AMT ` as withdrawal_amt,
