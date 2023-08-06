@@ -21,4 +21,3 @@ models:
       - name: balance_amt
         tests:
           - not_null
-      
