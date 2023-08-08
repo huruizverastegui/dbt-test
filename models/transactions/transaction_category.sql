@@ -10,5 +10,5 @@ WHEN transaction_details like '%AEPS%' THEN 'Aadhaar Enabled Payment System'
 WHEN transaction_details like '%INTERNAL FUND%' THEN 'Internal fund transfer'
 ELSE 'Others'
 
-END  as transaction_categ
+END  as category
 from `dbt-test-395011.dbt_huruizverastegui.transactions`
