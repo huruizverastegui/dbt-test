@@ -1,15 +1,8 @@
 select 
 transaction_id,
-transaction_details, 
 CASE 
-WHEN transaction_details like '%Indiaforensic%' THEN 'Indiaforensic'
-WHEN transaction_details like '%CASHDEP%' THEN 'Cash deposit'
-WHEN transaction_details like '%RTGS%' THEN 'Real-time Gross Settlement'
-WHEN transaction_details like '%IMPS%' THEN 'Immediate Payment Service'
-WHEN transaction_details like '%RUPAY%' THEN 'RUPAY'
-WHEN transaction_details like '%AEPS%' THEN 'Aadhaar Enabled Payment System'
-WHEN transaction_details like '%INTERNAL FUND%' THEN 'Internal fund transfer'
-ELSE 'Others'
+WHEN withdrawal_amt > 0  THEN 'withdrawal'
+WHEN deposit_amt > 0  THEN 'deposit'
 
 END  as transaction_type
 from `dbt-test-395011.dbt_huruizverastegui.transactions`
