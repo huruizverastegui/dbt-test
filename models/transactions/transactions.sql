@@ -10,13 +10,13 @@ CAST(` DEPOSIT AMT ` AS FLOAT64) as deposit_amt,
 CAST(`BALANCE AMT` AS FLOAT64) as balance_amt, 
 
 CASE 
-WHEN transaction_details like '%Indiaforensic%' THEN 'Indiaforensic'
-WHEN transaction_details like '%CASHDEP%' THEN 'Cash deposit'
-WHEN transaction_details like '%RTGS%' THEN 'Real-time Gross Settlement'
-WHEN transaction_details like '%IMPS%' THEN 'Immediate Payment Service'
-WHEN transaction_details like '%RUPAY%' THEN 'RUPAY'
-WHEN transaction_details like '%AEPS%' THEN 'Aadhaar Enabled Payment System'
-WHEN transaction_details like '%INTERNAL FUND%' THEN 'Internal fund transfer'
+WHEN `TRANSACTION DETAILS` like '%Indiaforensic%' THEN 'Indiaforensic'
+WHEN `TRANSACTION DETAILS` like '%CASHDEP%' THEN 'Cash deposit'
+WHEN `TRANSACTION DETAILS` like '%RTGS%' THEN 'Real-time Gross Settlement'
+WHEN `TRANSACTION DETAILS` like '%IMPS%' THEN 'Immediate Payment Service'
+WHEN `TRANSACTION DETAILS` like '%RUPAY%' THEN 'RUPAY'
+WHEN `TRANSACTION DETAILS` like '%AEPS%' THEN 'Aadhaar Enabled Payment System'
+WHEN `TRANSACTION DETAILS` like '%INTERNAL FUND%' THEN 'Internal fund transfer'
 ELSE 'Others'
 
 END  as category
