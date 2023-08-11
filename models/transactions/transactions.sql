@@ -18,7 +18,12 @@ WHEN `TRANSACTION DETAILS` like '%RUPAY%' THEN 'RUPAY'
 WHEN `TRANSACTION DETAILS` like '%AEPS%' THEN 'Aadhaar Enabled Payment System'
 WHEN `TRANSACTION DETAILS` like '%INTERNAL FUND%' THEN 'Internal fund transfer'
 ELSE 'Others'
+END  as category, 
 
-END  as category
+CASE 
+WHEN ` WITHDRAWAL AMT ` > 0  THEN 'withdrawal'
+WHEN ` DEPOSIT AMT ` > 0  THEN 'deposit'
+
+END  as type
 
 from `dbt-test-395011.dbt_huruizverastegui.transactions_data`
